@@ -1,0 +1,39 @@
+{
+    "library":[
+        {
+            "id": 1,
+            "title": "El Little Prince",
+            "category": "Kids",
+            "user": "Omar Velasco",
+            "email": "ovelaguz@gmail.com"
+          },
+          {
+            "id": 2,
+            "title": "Harry Potter",
+            "category": "Young Man",
+            "user": "Diego Serratos",
+            "email": "dserratos@gmail.com"
+          },
+          {
+            "id": 3,
+            "title": "The Hobbit",
+            "category": "Young man",
+            "user": "Ismael Cardenas",
+            "email": "icardenasz@gmail.com"
+          },
+          {
+            "id": 4,
+            "title": "Moby Dick",
+            "category": "Adult",
+            "user": "Aquiles Velasco",
+            "email": "avelasco@gmail.com"
+          },
+          {
+            "id": 5,
+            "title": "Dracula",
+            "category": "Young Man",
+            "user": "Fernanda Cobarruvias",
+            "email": "fcobarruvias@gmail.com"
+          }
+    ]
+}
