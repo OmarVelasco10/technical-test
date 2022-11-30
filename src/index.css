@@ -50,6 +50,16 @@ input[type="reset"] {
   cursor: pointer;
 }
 
+input[type="submit"] {
+  background-color: 	#007bff;
+  color: #FFF;
+}
+
+input[type="reset"] {
+  background-color: 	#17a2b8;
+  color: #FFF;
+}
+
 form {
   margin-bottom: 1rem;
 }
@@ -100,10 +110,21 @@ td {
   border-bottom: thin solid #dedede;
 }
 
+.button-edit {
+  margin-bottom: 1rem;
+  background-color: #28a745;
+  color: #FFF;
+}
+
+.button-delete {
+  background-color: #dc3545;
+  color: #FFF;
+}
+
 @media screen and (min-width: 1024px) {
   .grid-1-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-items: start;
     gap: 2rem;
   }

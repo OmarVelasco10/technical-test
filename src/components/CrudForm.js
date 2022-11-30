@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 const initailForm = {
   title: "",
   category: "",
+  author: "",
+  year: "",
   user: "",
   email: "",
   id: null,
@@ -22,15 +24,52 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target.title]: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
+  function isNumeric(val) {
+    return /^[A-Za-z\s]*$/.test(val);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    let emailRegex =
+      /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
-    if (!form.title || !form.category) {
-      alert("Datos incompletos");
+    if (
+      !form.title ||
+      !form.category ||
+      !form.author ||
+      !form.year ||
+      !form.user ||
+      !form.email
+    ) {
+      alert("Todos los campos son obligatorios");
+      return;
+    }
+
+    if (
+      !isNumeric(form.title) ||
+      !isNumeric(form.category) ||
+      !isNumeric(form.author) ||
+      !isNumeric(form.user)
+    ) {
+      console.log(isNumeric(form.title));
+      alert("El título, categoría, autor o usuario no pueden contener números");
+      console.log(isNumeric(form.title));
+      return;
+    } else {
+      console.log(
+        isNaN(form.title) ||
+          isNaN(form.category) ||
+          isNaN(form.author) ||
+          isNaN(form.user)
+      );
+    }
+
+    if (!emailRegex.test(form.email)) {
+      alert("Introduzca un correo válido");
       return;
     }
 
@@ -50,7 +89,11 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 
   return (
     <div>
-      <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
+      <h3>
+        {dataToEdit
+          ? "Editar prestamo de libro existente"
+          : "Registrar un nuevo prestamo de libro"}
+      </h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -66,14 +109,28 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.category}
         />
-         <input
+        <input
+          type="text"
+          name="author"
+          placeholder="Autor del libro"
+          onChange={handleChange}
+          value={form.author}
+        />
+        <input
+          type="text"
+          name="year"
+          placeholder="Año de publicación"
+          onChange={handleChange}
+          value={form.year}
+        />
+        <input
           type="text"
           name="user"
           placeholder="Nombre del usuario"
           onChange={handleChange}
           value={form.user}
         />
-         <input
+        <input
           type="text"
           name="email"
           placeholder="Email del usuario"
@@ -88,4 +145,3 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 };
 
 export default CrudForm;
-
