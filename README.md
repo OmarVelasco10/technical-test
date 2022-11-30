@@ -4,4 +4,4 @@ And the interface was built with react, loading.io, HTML and CSS.
 This project has validation for all input and email. It also has a component for backend response management.
 To run this project you only need:
 + Open a terminal and you should run "npm start" to start the frontend.
-+Open a second terminal and run "npm run fake-api" to start the backend.
++ Open a second terminal and run "npm run fake-api" to start the backend.
