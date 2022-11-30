@@ -4,7 +4,7 @@ import CrudApi from "./components/CrudApi";
 function App() {
   return (
     <>
-    <h1>Crud Library</h1>
+    <h1>Biblioteca Azteca</h1>
     <CrudApi />
     </>
   );

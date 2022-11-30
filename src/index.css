@@ -64,15 +64,6 @@ form {
   margin-bottom: 1rem;
 }
 
-hr {
-  margin: 2rem auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 label {
   padding: 0.5rem 0;
   margin: 0 0 0.5rem 0;
@@ -119,6 +110,10 @@ td {
 .button-delete {
   background-color: #dc3545;
   color: #FFF;
+}
+
+h1 {
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {

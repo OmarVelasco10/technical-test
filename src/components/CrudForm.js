@@ -95,6 +95,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           : "Registrar un nuevo prestamo de libro"}
       </h3>
       <form onSubmit={handleSubmit}>
+        <label>Título</label>
         <input
           type="text"
           name="title"
@@ -102,6 +103,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.title}
         />
+        <label>Categoría</label>
         <input
           type="text"
           name="category"
@@ -109,6 +111,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.category}
         />
+        <label>Autor del libro</label>
         <input
           type="text"
           name="author"
@@ -116,6 +119,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.author}
         />
+        <label>Año de publicación</label>
         <input
           type="text"
           name="year"
@@ -123,6 +127,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.year}
         />
+        <label>Nombre del usuario que recibe el libro</label>
         <input
           type="text"
           name="user"
@@ -130,6 +135,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.user}
         />
+        <label>Email del usuario que recibe el libro</label>
         <input
           type="text"
           name="email"

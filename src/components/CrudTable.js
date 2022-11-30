@@ -4,7 +4,7 @@ import CrudTableRow from "./CrudTableRow";
 const CrudTable = ({ data, setDataToEdit, deleteData }) => {
   return (
     <div>
-      <h3>Registro de prestamo de libros</h3>
+      <h3>Registros de prestamos de libros</h3>
       <table>
         <thead>
           <tr>
@@ -19,14 +19,14 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
         </thead>
         <tbody>
           {data.length > 0 ? (
-            data.map((el) => (
-              <CrudTableRow
-                key={el.id}
-                el={el}
-                setDataToEdit={setDataToEdit}
-                deleteData={deleteData}
-              />
-            ))
+             data.map((el) => (
+                <CrudTableRow
+                  key={el.id}
+                  el={el}
+                  setDataToEdit={setDataToEdit}
+                  deleteData={deleteData}
+                />
+              ))
           ) : (
             <tr>
               <td colSpan="3">No hay registro de prestamo de libros</td>

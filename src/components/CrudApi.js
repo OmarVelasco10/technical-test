@@ -11,6 +11,8 @@ const CrudApi = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+ 
+
   let api = helpHttp();
   let url = "http://localhost:5000/library";
 
@@ -20,7 +22,6 @@ const CrudApi = () => {
       console.log(res);
       if (!res.err) {
         setDb(res);
-        setError(null);
       } else {
         setDb(null);
         setError(res);
@@ -95,7 +96,6 @@ const CrudApi = () => {
 
   return (
     <div>
-      <h2>Crud API</h2>
       <div className="grid-1-2">
         <CrudForm
           createData={createData}
